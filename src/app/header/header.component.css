@@ -1,0 +1,21 @@
+header {
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  color: white;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.app-title {
+  margin: 1rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: solid 3px white;
+  border-radius: 10px;
+}

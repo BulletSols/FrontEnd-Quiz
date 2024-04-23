@@ -1,0 +1,49 @@
+.user-details {
+  display: grid;
+  align-items: center;
+  border: 1px solid blue;
+  border-radius: 10%;
+  padding: 50px 200px;
+  justify-content: center;
+  width: max-content;
+  margin-left: 26%;
+  font-size: xx-large;
+}
+
+.user-avatar img {
+  border-radius: 50%;
+  margin-bottom: 40px;
+  margin-left: 18px;
+}
+
+.user-info > *{
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+.user-name {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.user-email {
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.user-id {
+  color: #999;
+}
+
+.back-button {
+  position: absolute;
+  top: 2rem;
+  left: 30rem;
+  text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+}

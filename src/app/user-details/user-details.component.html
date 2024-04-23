@@ -1,0 +1,15 @@
+<div class="user-details" *ngIf="user; else loadingBar">
+  <mat-icon class="back-button" matTooltip="Go back" [routerLink]="['']">arrow_back</mat-icon>
+  <div class="user-avatar">
+    <img src="{{ user.avatar }}" alt="User Avatar">
+  </div>
+  <div class="user-info">
+    <div class="user-name">First Name: {{ user.first_name }}</div>
+    <div class="user-name">Last Name: {{ user.last_name }}</div>
+    <div class="user-email">Email: {{ user.email }}</div>
+    <div class="user-id">User ID: {{ user.id }}</div>
+  </div>
+</div>
+<ng-template #loadingBar>
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</ng-template>

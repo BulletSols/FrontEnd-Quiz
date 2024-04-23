@@ -1,0 +1,48 @@
+.user-list-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.user-card-container{
+  margin: 0 2rem ;
+}
+
+.user-card{
+  width: 30rem;
+  margin-bottom: 1rem;
+  transition: box-shadow 0.6s ease;
+  background: linear-gradient(90deg, rgba(3,21,24,0.9850533963585434) 0%, rgba(24,74,156,1) 100%);
+  border-radius: 10px;
+}
+
+.cardImage{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.cardInfo{
+  color: white;
+  font-size: large;
+  font-weight: bolder;
+  align-self: center;
+}
+
+.user-card:hover {
+  box-shadow: 0px 0px 15px 2px gray;
+}
+
+.cardBackground {
+  position: absolute;
+  height: -webkit-fill-available;
+  right: 8rem;
+}
+
+.search{
+  position: fixed;
+  top: 4px;
+  left: 43rem;
+  z-index: 1000;
+  width: 18rem;
+}

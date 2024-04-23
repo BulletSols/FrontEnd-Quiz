@@ -1,0 +1,37 @@
+<div class="user-list-container">
+
+  <mat-form-field appearance="fill" class="search">
+    <mat-label>Search User by ID</mat-label>
+    <input matInput type="text" (input)="onInputChange($event)">
+    <div *ngIf="searchText">
+      <mat-option *ngIf="user; else noResults" [routerLink]="['/user-details', user.id]">
+        {{ user.id }} - {{ user.first_name }} {{ user.last_name }}
+      </mat-option>
+      <ng-template #noResults>
+        <p>No result Found</p>
+      </ng-template>
+    </div>
+  </mat-form-field>
+
+  <div *ngIf="userResponse?.data">
+    <mat-card *ngFor="let user of userResponse.data" class="user-card" [routerLink]="['/user-details', user.id]">
+      <div class="user-card-container">
+        <img mat-card-image src="assets/light.png" alt="card background" class="cardBackground">
+
+        <mat-card-content class="cardImage">
+          <div class="cardInfo">
+            <p>ID: {{ user.id }}</p>
+            <p>{{ user.first_name }} {{ user.last_name }}</p>
+          </div>
+          <img mat-card-image [src]="user.avatar" style="width: 128px; height: 128px;" alt="User Avatar">
+        </mat-card-content>
+      </div>
+    </mat-card>
+  </div>
+
+  <mat-paginator *ngIf="userResponse?.data"
+                 [pageSize]="userResponse.per_page"
+                 [length]="userResponse.total"
+                 (page)="onPageChange($event)">
+  </mat-paginator>
+</div>
